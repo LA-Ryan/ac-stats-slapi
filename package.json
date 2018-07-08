@@ -1,0 +1,18 @@
+{
+  "name": "ac-stats-slapi",
+  "version": "1.0.0",
+  "description": "Scraping API for AC Stats app.",
+  "main": "ratings.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "moment": "^2.22.2",
+    "request": "^2.87.0",
+    "serverless": "^1.28.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Hoegerl",
+  "license": "ISC"
+}

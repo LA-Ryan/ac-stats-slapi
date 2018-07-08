@@ -1,0 +1,63 @@
+service: ac-stats-slapi
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+
+functions:
+  ratings:
+    handler: ratings.run
+    events:
+      - http:
+          path: ratings
+          method: get
+    timeout: 30
+  players:
+    handler: players.run
+    events:
+      - http:
+          path: players
+          method: get
+    timeout: 30
+  player:
+    handler: player.run
+    events:
+      - http:
+          path: player
+          method: get
+    timeout: 30
+  averageplayers:
+    handler: averageplayers.run
+    events:
+      - http:
+          path: averageplayers
+          method: get
+    timeout: 30
+  changes:
+    handler: changes.run
+    events:
+      - http:
+          path: changes
+          method: get
+    timeout: 30
+  games:
+    handler: games.run
+    events:
+      - http:
+          path: games
+          method: get
+    timeout: 30
+  refs:
+    handler: refs.run
+    events:
+      - http:
+          path: refs
+          method: get
+    timeout: 30
+  maps:
+    handler: maps.run
+    events:
+      - http:
+          path: maps
+          method: get
+    timeout: 30
