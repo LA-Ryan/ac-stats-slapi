@@ -1,6 +1,6 @@
 'use strict';
 
-const helpers = require("helpers");
+const helpers = require("./helpers");
 const request = require("request");
 const cheerio = require("cheerio");
 

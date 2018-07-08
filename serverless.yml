@@ -6,56 +6,56 @@ provider:
 
 functions:
   ratings:
-    handler: ratings.run
+    handler: src/ratings.run
     events:
       - http:
           path: ratings
           method: get
     timeout: 30
   players:
-    handler: players.run
+    handler: src/players.run
     events:
       - http:
           path: players
           method: get
     timeout: 30
   player:
-    handler: player.run
+    handler: src/player.run
     events:
       - http:
           path: player
           method: get
     timeout: 30
   averageplayers:
-    handler: averageplayers.run
+    handler: src/averageplayers.run
     events:
       - http:
           path: averageplayers
           method: get
     timeout: 30
   changes:
-    handler: changes.run
+    handler: src/changes.run
     events:
       - http:
           path: changes
           method: get
     timeout: 30
   games:
-    handler: games.run
+    handler: src/games.run
     events:
       - http:
           path: games
           method: get
     timeout: 30
   refs:
-    handler: refs.run
+    handler: src/refs.run
     events:
       - http:
           path: refs
           method: get
     timeout: 30
   maps:
-    handler: maps.run
+    handler: src/maps.run
     events:
       - http:
           path: maps

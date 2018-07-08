@@ -2,7 +2,7 @@
 
 const request = require("request");
 const cheerio = require("cheerio");
-const helpers = require("helpers");
+const helpers = require("./helpers");
 
 module.exports.run = (event, context, callback) => {
     request(helpers.baseurl + '/ratings.php', function (error, response, html) {

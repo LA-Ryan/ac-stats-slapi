@@ -1,6 +1,6 @@
 'use strict';
 
-const helpers = require('helpers');
+const helpers = require('./helpers');
 
 module.exports.run = (event, context, callback) => {
     helpers.getIndexPage($ => {

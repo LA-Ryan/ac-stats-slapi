@@ -1,6 +1,6 @@
 'use strict';
 
-const helpers = require("helpers");
+const helpers = require("./helpers");
 const moment = require("moment");
 
 module.exports.run = (event, context, callback) => {
