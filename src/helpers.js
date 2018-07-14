@@ -33,6 +33,7 @@ module.exports.getPlayerGames = (player, cb, date) => {
         var stats = {};
         var maps = {};
         var gamesCount = 0;
+        var games = [];
         $('.gamelog tbody tr').each((i, elem) => {
             if(currDate.isBefore(date)) return false;
             gamesCount++;
@@ -51,12 +52,21 @@ module.exports.getPlayerGames = (player, cb, date) => {
             var winLose = $(currCols).eq(8).text();
             winLose.includes('Won') ? addOrIncrement(stats, 'won') : addOrIncrement(stats, 'lost');
             currDate = moment(colDate, 'MM.DD.YYYY');
+            games.push({
+                date: colDate,
+                map: map,
+                kills: kill,
+                deaths: deaths,
+                dr: dr,
+                kd: kd,
+                winLose: winLose
+            });
         });
         stats.kills /= gamesCount;
         stats.deaths /= gamesCount;
         stats.dr /= gamesCount;
         stats.kd /= gamesCount;
-        cb({stats: stats, maps: maps, played: gamesCount});
+        cb({stats: stats, maps: maps, played: gamesCount, games: games});
     });
 }
 
